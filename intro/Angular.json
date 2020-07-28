@@ -22,6 +22,16 @@
             "options": {
               "browserTarget": "helloapp:build"
             }
+          },
+          "configurations": {
+              "prodaction": {
+                  "optimization": true,
+                  "outputHashing": "all",
+                  "sorceMap":false,
+                  "namedChunks": false,
+                  "vendorChunk": false,
+                  "buildOptimizer": true
+              }
           }
         }
       }},
