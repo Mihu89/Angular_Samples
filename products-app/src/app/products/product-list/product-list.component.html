@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="table-responsive">
-            <table class="table" *ngIf="products && products.lenght" >
+            <table class="table" *ngIf="products && products.length" >
                 <thead>
                     <tr>
                         <th>
@@ -43,10 +43,11 @@
                         <td>{{product.productCode | lowercase }}</td>
                         <td>{{product.releaseDate }}</td>
                         <td>{{product.price | currency: 'USD': 'symbol': '1.2-2'}</td>
-                        
+                        <td><app-star [rating]='product.starRating' (ratingClicked) ='onRatingClicked($event)'></app-star></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
+    <div *ngIf='errorMessage' class="alert alert-danger"> Error: {{errorMessage}}</div>
 </div>
