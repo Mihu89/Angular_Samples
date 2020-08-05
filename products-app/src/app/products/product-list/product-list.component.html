@@ -39,10 +39,10 @@
                                 [style.margin.px]='imageMargin'
                             />
                         </td>
-                        <td><a [routerLink]="['/products', productId]" >{{product.productName}}</a></td>
+                        <td><a [routerLink]="['/products', product.productId]" >{{product.productName}}</a></td>
                         <td>{{product.productCode | lowercase }}</td>
                         <td>{{product.releaseDate }}</td>
-                        <td>{{product.price | currency: 'USD': 'symbol': '1.2-2'}</td>
+                        <td>{{product.price | currency: 'USD': 'symbol': '1.2-2'}}</td>
                         <td><app-star [rating]='product.starRating' (ratingClicked) ='onRatingClicked($event)'></app-star></td>
                     </tr>
                 </tbody>
