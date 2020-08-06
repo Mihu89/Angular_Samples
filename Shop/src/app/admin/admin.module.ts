@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminLayoutComponent } from './shared/admin-layout/admin-layout.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { EditPageComponent } from './edit-page/edit-page.component';
@@ -20,6 +21,8 @@ import { DashboardPageComponent } from './dashboard-page/dashboard-page.componen
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forChild([
       {
         path: '', component: AdminLayoutComponent, children: [
@@ -35,4 +38,5 @@ import { DashboardPageComponent } from './dashboard-page/dashboard-page.componen
   ],
   exports: [RouterModule]
 })
+
 export class AdminModule { }
